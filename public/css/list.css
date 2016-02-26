@@ -1,0 +1,22 @@
+.list dt, .list dd {
+  height: 3.4em;
+  line-height: 3.4em; }
+
+.list dt {
+  text-indent: 3%;
+  background: #eee; }
+
+.list dd {
+  border-bottom: 1px solid #bbb; }
+  .list dd a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 2.4em 0 0;
+    text-indent: 3%; }
+    .list dd a img {
+      width: 1.4em;
+      height: 1.4em;
+      margin: 1em -1em 0 0;
+      float: right; }

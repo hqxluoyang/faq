@@ -1,0 +1,25 @@
+@charset "UTF-8";
+html, body, div, span, p, h1, h2, h3, h4, h5, b, i, ul, ol, dl, li, dt, dd, img, input, table, tbody, tr, td, th {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+ul, ol, dl {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+html, body {
+  font: 12px/1.5 "微软雅黑" ， "Arial"; }
+
+.temp-main, footer {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto; }
+
+.temp-main .temp-title {
+  height: 3em;
+  line-height: 3em;
+  border-bottom: 1px solid #bbb;
+  font-size: 16px; }

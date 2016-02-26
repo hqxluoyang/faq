@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+     <meta name="renderer" content="webkit"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+     <meta name="apple-touch-fullscreen" content="yes" /> 
+     <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <title>闪传</title>
+   
+  </head>
+  <body>
+    <script>
+      (function(){
+        window.services = {};
+        services.setBaseurl = function(baseurl){
+            this.baseurl = baseurl.charAt(baseurl.length - 1) === '/' ? baseurl : baseurl+'/';
+            //offline mode has a /web/ prefix
+            this.baseurl = this.baseurl.replace(/\/web\/$/,'/');
+            this.uploadurl = this.baseurl + 'upload'
+            this.respImageurl = this.baseurl + 'respImage'
+            this.webclienturl = this.baseurl + 'webclient'
+          }
+  
+          services.setChannelurl = function(channelurl){
+            if(channelurl.indexOf('http') == 0){
+              this.channelurl = channelurl;
+            }
+            else{
+              this.channelurl = this.baseurl + channelurl;
+            }
+          } 
+          
+          var baseurl =  document.location.href.substring(0 , document.location.href.indexOf('#!')) || document.location.href;
+          services.setBaseurl(baseurl)
+          
+      })()
+    </script>
+
+    <div id="app"></div>
+
+  
+    <script src="./dist/build.js"></script>
+
+  </body>
+</html>
